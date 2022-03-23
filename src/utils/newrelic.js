@@ -187,39 +187,41 @@ module.exports = class NewRelic {
   }
 
   async addToPolicy(entityId) {
-    try {
-      let { data } = await axios.get(
-        `${ENDPOINTS.ALERTS[this.server]}/policies/${this.policyId}.json`,
-        {
-          headers: {
-            'Api-Key': this.apiKey,
+    if (this.policyId) {
+      try {
+        let { data } = await axios.get(
+          `${ENDPOINTS.ALERTS[this.server]}/policies/${this.policyId}.json`,
+          {
+            headers: {
+              'Api-Key': this.apiKey,
+            },
           },
-        },
-      );
-      data.location_failure_conditions = _.each(
-        data.location_failure_conditions,
-        async condition => {
-          if (_.indexOf(condition.entities, entityId) == -1) {
-            condition.entities.push(entityId);
+        );
+        data.location_failure_conditions = _.each(
+          data.location_failure_conditions,
+          async condition => {
+            if (_.indexOf(condition.entities, entityId) == -1) {
+              condition.entities.push(entityId);
 
-            let updatePayload = {
-              location_failure_condition: condition,
-            };
+              let updatePayload = {
+                location_failure_condition: condition,
+              };
 
-            await axios.put(
-              `${ENDPOINTS.ALERTS[this.server]}/${condition.id}.json`,
-              updatePayload,
-              {
-                headers: {
-                  'Api-Key': this.apiKey,
+              await axios.put(
+                `${ENDPOINTS.ALERTS[this.server]}/${condition.id}.json`,
+                updatePayload,
+                {
+                  headers: {
+                    'Api-Key': this.apiKey,
+                  },
                 },
-              },
-            );
-          }
-        },
-      );
-    } catch (error) {
-      throw new Error(error.message);
+              );
+            }
+          },
+        );
+      } catch (error) {
+        throw new Error(error.message);
+      }
     }
   }
 
