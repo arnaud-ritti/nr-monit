@@ -20,20 +20,20 @@
   "author": "arnaud-ritti",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
-    "@actions/github": "^5.0.0",
-    "axios": "^0.26.1",
-    "lodash": "^4.17.21",
-    "parse-link-header": "^2.0.0",
-    "yup": "^0.32.11"
+    "@actions/core": "1.6.0",
+    "@actions/github": "5.0.0",
+    "axios": "0.26.1",
+    "lodash": "4.17.21",
+    "parse-link-header": "2.0.0",
+    "yup": "0.32.11"
   },
   "devDependencies": {
-    "@umijs/fabric": "^2.10.2",
-    "@vercel/ncc": "^0.33.3",
-    "eslint": "^8.11.0",
-    "eslint-plugin-github": "^4.3.5",
-    "eslint-plugin-jest": "^26.1.2",
-    "jest": "^27.5.1",
-    "prettier": "^2.6.0"
+    "@umijs/fabric": "2.10.2",
+    "@vercel/ncc": "0.33.3",
+    "eslint": "8.11.0",
+    "eslint-plugin-github": "4.3.6",
+    "eslint-plugin-jest": "26.1.2",
+    "jest": "27.5.1",
+    "prettier": "2.6.0"
   }
 }
