@@ -1,0 +1,50 @@
+monitors:
+  example_simple:
+    policy_id: 114560
+    name: "example_simple"
+    type: "SIMPLE"
+    frequency: 10
+    uri: https://example.com
+    locations: 2
+    status: "ENABLED"
+    slaThreshold: 7.0
+    options:
+      validationString: "Example Domain"
+      verifySSL: true
+      bypassHEADRequest: false
+      treatRedirectAsFailure: false
+
+  example_browser:
+    policy_id: 114560
+    name: "example_browser"
+    type: "BROWSER"
+    frequency: 10
+    uri: https://example.com
+    locations: 2
+    status: "ENABLED"
+    slaThreshold: 7.0
+    options:
+      validationString: "Example Domain"
+      verifySSL: true
+
+  example_script_browser:
+    policy_id: 114560
+    name: "example_script_browser"
+    type: "SCRIPT_BROWSER"
+    frequency: 10
+    locations: 2
+    status: "ENABLED"
+    slaThreshold: 7.0
+    options:
+      scriptfile: "./script_browser.js"
+
+  example_script_api:
+    policy_id: 114560
+    name: "example_script_api"
+    type: "SCRIPT_API"
+    frequency: 10
+    locations: 2
+    status: "ENABLED"
+    slaThreshold: 7.0
+    options:
+      scriptfile: "./script_api.js"

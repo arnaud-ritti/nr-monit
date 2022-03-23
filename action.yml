@@ -1,0 +1,25 @@
+name: 'New Relic - Monitoring as Code'
+description: 'A GitHub actions to create New Relic synthetic monitoring.'
+author: 'arnaud-ritti'
+
+branding:
+  icon: 'activity'
+  color: 'red'
+
+inputs:
+  config:
+    description: Configuration file for your monitors.
+    required: true
+    default: '_monitors.yml'
+
+  api_key:
+    description: New Relic API Key
+    required: true
+
+  eu_server:
+    description: Use UE server for New Relic
+    required: false
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
