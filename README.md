@@ -7,7 +7,7 @@ A GitHub actions to create New Relic synthetic monitoring.
 </div>
 
 ![](https://img.shields.io/github/workflow/status/arnaud-ritti/nr-monit/CI?style=flat-square)
-[![](https://img.shields.io/badge/marketplace-action--js--template-blueviolet?style=flat-square)](https://github.com/marketplace/actions/action-js-template)
+[![](https://img.shields.io/badge/marketplace-new--relic--monitoring--as--code-blueviolet?style=flat-square)](https://github.com/marketplace/actions/new-relic-monitoring-as-code)
 [![](https://img.shields.io/github/v/release/arnaud-ritti/nr-monit?style=flat-square&color=orange)](https://github.com/arnaud-ritti/nr-monit/releases)
 
 ## 🚀 How to use?
