@@ -1,14 +1,26 @@
+<br/>
 <p align="center">
   <img width="240" src="https://cdn.cdnlogo.com/logos/n/59/new-relic.svg" />
 </p>
-<h1 align="center">New Relic - Monitoring as Code</h1>
+<br/>
+<h1 align="center">New Relic - Monitoring as Code</h1><br/>
 <div align="center">
-A GitHub actions to create New Relic synthetic monitoring.
-</div>
+  <p>A GitHub actions to create New Relic synthetic monitoring.</p>
+  <br/>
+  
+  ![](https://img.shields.io/github/workflow/status/arnaud-ritti/nr-monit/CI?style=flat-square)
+  [![](https://img.shields.io/badge/marketplace-new--relic--monitoring--as--code-blueviolet?style=flat-square)](https://github.com/marketplace/actions/new-relic-monitoring-as-code)
+  [![](https://img.shields.io/github/v/release/arnaud-ritti/nr-monit?style=flat-square&color=orange)](https://github.com/arnaud-ritti/nr-monit/releases)
+  
+  <br/>
+  <p>
+    <a href='https://ko-fi.com/arnaudritti' target='_blank'>
+      <img height='35' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+    </a>
+  </p>
 
-![](https://img.shields.io/github/workflow/status/arnaud-ritti/nr-monit/CI?style=flat-square)
-[![](https://img.shields.io/badge/marketplace-new--relic--monitoring--as--code-blueviolet?style=flat-square)](https://github.com/marketplace/actions/new-relic-monitoring-as-code)
-[![](https://img.shields.io/github/v/release/arnaud-ritti/nr-monit?style=flat-square&color=orange)](https://github.com/arnaud-ritti/nr-monit/releases)
+</div>
+<br/>
 
 ## 🚀 How to use?
 
@@ -19,7 +31,7 @@ name: New Relic Monitor
 
 on: [push, pull_request]
 
-jobs:
+jobs: 
   new_relic:
     name: New Relic Monitor
     runs-on: ubuntu-latest
