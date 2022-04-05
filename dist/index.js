@@ -31436,6 +31436,7 @@ module.exports = class NewRelic {
 
   async createOrUpdate(config) {
     try {
+      delete config.policy_id;
       let monitor = await monitorSchema.validate(config);
       const currentMonitors = await this.getMonitors();
       const locations = await this.getLocations();
@@ -31475,6 +31476,8 @@ module.exports = class NewRelic {
           if (result.status == 204) {
             return currentMonitor.id;
           }
+        } else {
+          return currentMonitor.id;
         }
       } else {
         if (!Array.isArray(monitor.locations)) {
@@ -31492,11 +31495,11 @@ module.exports = class NewRelic {
             },
           },
         );
-        console.log(result);
         if (result.status == 201) {
           const newSynthPath = result.headers.location;
           return newSynthPath.split('/').pop();
         }
+        return null;
       }
     } catch (error) {
       throw new Error(error.message);
